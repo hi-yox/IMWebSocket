@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17925D33224CB8E400BB81F0 /* IMWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17925D29224CB8E400BB81F0 /* IMWebSocket.framework */; };
+		17925D38224CB8E400BB81F0 /* IMWebSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17925D37224CB8E400BB81F0 /* IMWebSocketTests.m */; };
+		17925D3A224CB8E400BB81F0 /* IMWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 17925D2C224CB8E400BB81F0 /* IMWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17925D45224CB91E00BB81F0 /* DMWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 17925D43224CB91E00BB81F0 /* DMWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17925D46224CB91E00BB81F0 /* DMWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 17925D44224CB91E00BB81F0 /* DMWebSocket.m */; };
+		17925D49224CC0AC00BB81F0 /* DMNetworkStreamer.h in Headers */ = {isa = PBXBuildFile; fileRef = 17925D47224CC0AC00BB81F0 /* DMNetworkStreamer.h */; };
+		17925D4A224CC0AC00BB81F0 /* DMNetworkStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 17925D48224CC0AC00BB81F0 /* DMNetworkStreamer.m */; };
+		17925D4D224CC0BC00BB81F0 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17925D4C224CC0BC00BB81F0 /* Network.framework */; };
+		17DDABA8224E77EC00612F8F /* DMByteBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 17DDABA6224E77EB00612F8F /* DMByteBuffer.h */; };
+		17E0680B224D99D500696162 /* DMWebSocketParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E06809224D99D500696162 /* DMWebSocketParser.h */; };
+		17E0680C224D99D500696162 /* DMWebSocketParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E0680A224D99D500696162 /* DMWebSocketParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17925D34224CB8E400BB81F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17925D20224CB8E400BB81F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17925D28224CB8E400BB81F0;
+			remoteInfo = IMWebSocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17925D29224CB8E400BB81F0 /* IMWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IMWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17925D2C224CB8E400BB81F0 /* IMWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMWebSocket.h; sourceTree = "<group>"; };
+		17925D2D224CB8E400BB81F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17925D32224CB8E400BB81F0 /* IMWebSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMWebSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17925D37224CB8E400BB81F0 /* IMWebSocketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMWebSocketTests.m; sourceTree = "<group>"; };
+		17925D39224CB8E400BB81F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17925D43224CB91E00BB81F0 /* DMWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMWebSocket.h; sourceTree = "<group>"; };
+		17925D44224CB91E00BB81F0 /* DMWebSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMWebSocket.m; sourceTree = "<group>"; };
+		17925D47224CC0AC00BB81F0 /* DMNetworkStreamer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMNetworkStreamer.h; sourceTree = "<group>"; };
+		17925D48224CC0AC00BB81F0 /* DMNetworkStreamer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMNetworkStreamer.m; sourceTree = "<group>"; };
+		17925D4C224CC0BC00BB81F0 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		17DDABA6224E77EB00612F8F /* DMByteBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMByteBuffer.h; sourceTree = "<group>"; };
+		17E06809224D99D500696162 /* DMWebSocketParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMWebSocketParser.h; sourceTree = "<group>"; };
+		17E0680A224D99D500696162 /* DMWebSocketParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMWebSocketParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17925D26224CB8E400BB81F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17925D4D224CC0BC00BB81F0 /* Network.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17925D2F224CB8E400BB81F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17925D33224CB8E400BB81F0 /* IMWebSocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17925D1F224CB8E400BB81F0 = {
+			isa = PBXGroup;
+			children = (
+				17925D2B224CB8E400BB81F0 /* IMWebSocket */,
+				17925D36224CB8E400BB81F0 /* IMWebSocketTests */,
+				17925D2A224CB8E400BB81F0 /* Products */,
+				17925D4B224CC0BB00BB81F0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		17925D2A224CB8E400BB81F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17925D29224CB8E400BB81F0 /* IMWebSocket.framework */,
+				17925D32224CB8E400BB81F0 /* IMWebSocketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17925D2B224CB8E400BB81F0 /* IMWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				17925D2C224CB8E400BB81F0 /* IMWebSocket.h */,
+				17925D43224CB91E00BB81F0 /* DMWebSocket.h */,
+				17925D44224CB91E00BB81F0 /* DMWebSocket.m */,
+				17DDABA6224E77EB00612F8F /* DMByteBuffer.h */,
+				17925D47224CC0AC00BB81F0 /* DMNetworkStreamer.h */,
+				17925D48224CC0AC00BB81F0 /* DMNetworkStreamer.m */,
+				17E06809224D99D500696162 /* DMWebSocketParser.h */,
+				17E0680A224D99D500696162 /* DMWebSocketParser.m */,
+				17925D2D224CB8E400BB81F0 /* Info.plist */,
+			);
+			path = IMWebSocket;
+			sourceTree = "<group>";
+		};
+		17925D36224CB8E400BB81F0 /* IMWebSocketTests */ = {
+			isa = PBXGroup;
+			children = (
+				17925D37224CB8E400BB81F0 /* IMWebSocketTests.m */,
+				17925D39224CB8E400BB81F0 /* Info.plist */,
+			);
+			path = IMWebSocketTests;
+			sourceTree = "<group>";
+		};
+		17925D4B224CC0BB00BB81F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17925D4C224CC0BC00BB81F0 /* Network.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		17925D24224CB8E400BB81F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17925D45224CB91E00BB81F0 /* DMWebSocket.h in Headers */,
+				17DDABA8224E77EC00612F8F /* DMByteBuffer.h in Headers */,
+				17925D49224CC0AC00BB81F0 /* DMNetworkStreamer.h in Headers */,
+				17E0680B224D99D500696162 /* DMWebSocketParser.h in Headers */,
+				17925D3A224CB8E400BB81F0 /* IMWebSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		17925D28224CB8E400BB81F0 /* IMWebSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17925D3D224CB8E400BB81F0 /* Build configuration list for PBXNativeTarget "IMWebSocket" */;
+			buildPhases = (
+				17925D24224CB8E400BB81F0 /* Headers */,
+				17925D25224CB8E400BB81F0 /* Sources */,
+				17925D26224CB8E400BB81F0 /* Frameworks */,
+				17925D27224CB8E400BB81F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMWebSocket;
+			productName = IMWebSocket;
+			productReference = 17925D29224CB8E400BB81F0 /* IMWebSocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		17925D31224CB8E400BB81F0 /* IMWebSocketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17925D40224CB8E400BB81F0 /* Build configuration list for PBXNativeTarget "IMWebSocketTests" */;
+			buildPhases = (
+				17925D2E224CB8E400BB81F0 /* Sources */,
+				17925D2F224CB8E400BB81F0 /* Frameworks */,
+				17925D30224CB8E400BB81F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17925D35224CB8E400BB81F0 /* PBXTargetDependency */,
+			);
+			name = IMWebSocketTests;
+			productName = IMWebSocketTests;
+			productReference = 17925D32224CB8E400BB81F0 /* IMWebSocketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17925D20224CB8E400BB81F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = RongCloud;
+				TargetAttributes = {
+					17925D28224CB8E400BB81F0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					17925D31224CB8E400BB81F0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 17925D23224CB8E400BB81F0 /* Build configuration list for PBXProject "IMWebSocket" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 17925D1F224CB8E400BB81F0;
+			productRefGroup = 17925D2A224CB8E400BB81F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17925D28224CB8E400BB81F0 /* IMWebSocket */,
+				17925D31224CB8E400BB81F0 /* IMWebSocketTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17925D27224CB8E400BB81F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17925D30224CB8E400BB81F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17925D25224CB8E400BB81F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17925D4A224CC0AC00BB81F0 /* DMNetworkStreamer.m in Sources */,
+				17925D46224CB91E00BB81F0 /* DMWebSocket.m in Sources */,
+				17E0680C224D99D500696162 /* DMWebSocketParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17925D2E224CB8E400BB81F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17925D38224CB8E400BB81F0 /* IMWebSocketTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17925D35224CB8E400BB81F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17925D28224CB8E400BB81F0 /* IMWebSocket */;
+			targetProxy = 17925D34224CB8E400BB81F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17925D3B224CB8E400BB81F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		17925D3C224CB8E400BB81F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		17925D3E224CB8E400BB81F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = IMWebSocket/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soooner.IMWebSocket;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17925D3F224CB8E400BB81F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = IMWebSocket/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soooner.IMWebSocket;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17925D41224CB8E400BB81F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				INFOPLIST_FILE = IMWebSocketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soooner.IMWebSocketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17925D42224CB8E400BB81F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				INFOPLIST_FILE = IMWebSocketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soooner.IMWebSocketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17925D23224CB8E400BB81F0 /* Build configuration list for PBXProject "IMWebSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17925D3B224CB8E400BB81F0 /* Debug */,
+				17925D3C224CB8E400BB81F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17925D3D224CB8E400BB81F0 /* Build configuration list for PBXNativeTarget "IMWebSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17925D3E224CB8E400BB81F0 /* Debug */,
+				17925D3F224CB8E400BB81F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17925D40224CB8E400BB81F0 /* Build configuration list for PBXNativeTarget "IMWebSocketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17925D41224CB8E400BB81F0 /* Debug */,
+				17925D42224CB8E400BB81F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17925D20224CB8E400BB81F0 /* Project object */;
+}
