@@ -18,6 +18,7 @@
 		17DDABA8224E77EC00612F8F /* DMByteBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 17DDABA6224E77EB00612F8F /* DMByteBuffer.h */; };
 		17E0680B224D99D500696162 /* DMWebSocketParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E06809224D99D500696162 /* DMWebSocketParser.h */; };
 		17E0680C224D99D500696162 /* DMWebSocketParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E0680A224D99D500696162 /* DMWebSocketParser.m */; };
+		9C1717432B54BACB00253D99 /* DMByteBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C1717422B54BACB00253D99 /* DMByteBuffer.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		17DDABA6224E77EB00612F8F /* DMByteBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMByteBuffer.h; sourceTree = "<group>"; };
 		17E06809224D99D500696162 /* DMWebSocketParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMWebSocketParser.h; sourceTree = "<group>"; };
 		17E0680A224D99D500696162 /* DMWebSocketParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMWebSocketParser.m; sourceTree = "<group>"; };
+		9C1717422B54BACB00253D99 /* DMByteBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DMByteBuffer.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				17925D43224CB91E00BB81F0 /* DMWebSocket.h */,
 				17925D44224CB91E00BB81F0 /* DMWebSocket.m */,
 				17DDABA6224E77EB00612F8F /* DMByteBuffer.h */,
+				9C1717422B54BACB00253D99 /* DMByteBuffer.c */,
 				17925D47224CC0AC00BB81F0 /* DMNetworkStreamer.h */,
 				17925D48224CC0AC00BB81F0 /* DMNetworkStreamer.m */,
 				17E06809224D99D500696162 /* DMWebSocketParser.h */,
@@ -232,6 +235,7 @@
 			files = (
 				17925D4A224CC0AC00BB81F0 /* DMNetworkStreamer.m in Sources */,
 				17925D46224CB91E00BB81F0 /* DMWebSocket.m in Sources */,
+				9C1717432B54BACB00253D99 /* DMByteBuffer.c in Sources */,
 				17E0680C224D99D500696162 /* DMWebSocketParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

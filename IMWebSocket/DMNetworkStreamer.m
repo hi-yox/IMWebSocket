@@ -35,8 +35,18 @@
             port = "80";
         }
         nw_endpoint_t endpoint = nw_endpoint_create_host(hostname, port);
-        nw_parameters_t parameters = nw_parameters_create_secure_tcp(NW_PARAMETERS_DISABLE_PROTOCOL,
+        
+        nw_parameters_configure_protocol_block_t configure_tls = ^(nw_protocol_options_t  _Nonnull options) {
+            sec_protocol_options_t option = nw_tls_copy_sec_protocol_options(options);
+            sec_protocol_options_set_verify_block(option, ^(sec_protocol_metadata_t  _Nonnull metadata, sec_trust_t  _Nonnull trust_ref, sec_protocol_verify_complete_t  _Nonnull complete) {
+                complete(true);
+            }, _workQueue);
+        };
+        
+        nw_parameters_t parameters = nw_parameters_create_secure_tcp(configure_tls,
                                         NW_PARAMETERS_DEFAULT_CONFIGURATION);
+        
+        
         
         nw_protocol_stack_t protocol_stack = nw_parameters_copy_default_protocol_stack(parameters);
         nw_protocol_options_t ip_options = nw_protocol_stack_copy_internet_protocol(protocol_stack);

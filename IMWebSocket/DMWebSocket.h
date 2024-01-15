@@ -13,7 +13,7 @@ typedef enum : UInt8 {
     DMWebSocketOpCodeText = 0x01,
     DMWebSocketOpCodeBinary = 0x02,
     // 3-7 are reserved.
-    DMWebSocketOpCodeConnectionClose = 0x03,
+    DMWebSocketOpCodeClose = 0x08,
     DMWebSocketOpCodePing = 0x09,
     DMWebSocketOpCodePong = 0x0A
     // B-F reserved.
@@ -47,6 +47,9 @@ typedef enum DMStatusCode : NSInteger {
 
 @class DMWebSocket;
 
+
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol DMWebSocketDelegate <NSObject>
 - (void)webSocketDidConnected:(DMWebSocket *)webSocket;
 - (void)webSocket:(DMWebSocket *)webSocket pong:(NSData *)pong;
@@ -56,7 +59,6 @@ typedef enum DMStatusCode : NSInteger {
 - (void)websocketDidDisconnect:(DMWebSocket *)webSocket;
 @end
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface DMWebSocket : NSObject
 @property (nonatomic,weak)id <DMWebSocketDelegate>delegate;

@@ -75,7 +75,7 @@ static NSString *const headerWSAcceptName      = @"Sec-WebSocket-Accept";
     NSURL *_url = _request.URL;
     
     CFHTTPMessageRef request = CFHTTPMessageCreateRequest(NULL, CFSTR("GET"), (__bridge CFURLRef)_url, kCFHTTPVersion1_1);
-    CFHTTPMessageSetHeaderFieldValue(request, CFSTR("Host"), (__bridge CFStringRef)(_url.port ? [NSString stringWithFormat:@"%@:%@", _url.host, _url.port] : _url.host));
+    CFHTTPMessageSetHeaderFieldValue(request, CFSTR("Host"), (__bridge CFStringRef)(_url.host));
    
     CFHTTPMessageSetHeaderFieldValue(request, CFSTR("Upgrade"), CFSTR("websocket"));
     CFHTTPMessageSetHeaderFieldValue(request, CFSTR("Connection"), CFSTR("Upgrade"));
@@ -86,7 +86,7 @@ static NSString *const headerWSAcceptName      = @"Sec-WebSocket-Accept";
     if (_protocols) {
         CFHTTPMessageSetHeaderFieldValue(request, CFSTR("Sec-WebSocket-Protocol"), (__bridge CFStringRef)[_protocols componentsJoinedByString:@", "]);
     }
-    CFHTTPMessageSetHeaderFieldValue(request,CFSTR("Sec-WebSocket-Extensions"),CFSTR("permessage-deflate; client_max_window_bits; server_max_window_bits=15"));
+//    CFHTTPMessageSetHeaderFieldValue(request,CFSTR("Sec-WebSocket-Extensions"),CFSTR("permessage-deflate; client_max_window_bits; server_max_window_bits=15"));
     [_request.allHTTPHeaderFields enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         CFHTTPMessageSetHeaderFieldValue(request, (__bridge CFStringRef)key, (__bridge CFStringRef)obj);
     }];
@@ -182,7 +182,7 @@ static NSString *const headerWSAcceptName      = @"Sec-WebSocket-Accept";
     NSLog(@"parserDidError %@",error);
     UInt16 code = error.code;
     NSData *message = [NSData dataWithBytes:&code length:2];
-    NSData *frame = [_parser createFrame:message opCode:DMWebSocketOpCodeConnectionClose];
+    NSData *frame = [_parser createFrame:message opCode:DMWebSocketOpCodeClose];
     if (_connected) {
         [_streamer write:frame];
         _connected = NO;

@@ -69,8 +69,8 @@ static NSString *const IMWebSocketAppendToSecKeyString = @"258EAFA5-E914-47DA-95
     if (self) {
         _didHandshake = NO;
         NSMutableData *keyBytes = [[NSMutableData alloc] initWithLength:16];
-        int result = SecRandomCopyBytes(kSecRandomDefault, keyBytes.length, keyBytes.mutableBytes);
-        if (result == 0) NSLog(@"SecRandomCopyBytes success");
+        int rc = SecRandomCopyBytes(kSecRandomDefault, keyBytes.length, keyBytes.mutableBytes);
+        if (rc == 0) NSLog(@"SecRandomCopyBytes success");
         _securityKey = [keyBytes base64EncodedStringWithOptions:0];
         _byteBuffer = alloc_buffer(4096);
     }
@@ -115,7 +115,7 @@ static NSString *const IMWebSocketAppendToSecKeyString = @"258EAFA5-E914-47DA-95
     uint8_t isMasked = (DMMaskMask & header[1]);
     uint8_t payloadLen = (DMPayloadLenMask & header[1]);
     uint8_t offset = DMFrameHeaderLength; //skip past the control opcodes of the frame
-    BOOL isControlFrame = (receivedOpcode == DMWebSocketOpCodeConnectionClose || receivedOpcode == DMWebSocketOpCodePing);
+    BOOL isControlFrame = (receivedOpcode == DMWebSocketOpCodeClose || receivedOpcode == DMWebSocketOpCodePing);
     BOOL needDecompression = ((DMRSV1Mask & header[0]) > 0);
     if ((isMasked > 0 || (DMRSVMask & header[0]) > 0) && receivedOpcode != DMWebSocketOpCodePong && !needDecompression) {
         NSError *error = [NSError errorWithDomain:@"DMWebSocketParserDomain" code:DMStatusCodeProtocolError userInfo:@{@"desc":@"masked and rsv data is not currently supported"}];
@@ -123,8 +123,8 @@ static NSString *const IMWebSocketAppendToSecKeyString = @"258EAFA5-E914-47DA-95
         return isContinue;
     }
     if (!isControlFrame && (receivedOpcode != DMWebSocketOpCodeBinary && receivedOpcode != DMWebSocketOpCodeContinueFrame &&
-                           receivedOpcode != DMWebSocketOpCodeText && receivedOpcode != DMWebSocketOpCodePong)) {
-        NSError *error = [[NSError alloc]initWithDomain:@"DMWebSocketParserDomain" code:DMStatusCodeProtocolError userInfo:@{@"desc":@"unknown opcode"}];
+                           receivedOpcode != DMWebSocketOpCodeText && receivedOpcode != DMWebSocketOpCodePong && receivedOpcode != DMWebSocketOpCodeClose)) {
+        NSError *error = [[NSError alloc]initWithDomain:@"DMWebSocketParserDomain" code:DMStatusCodeProtocolError userInfo:@{@"desc":[NSString stringWithFormat:@"unknown opcode: %@", @(receivedOpcode)]}];
         [self.delegate parserDidError:error];
         return isContinue;
     }
@@ -134,7 +134,7 @@ static NSString *const IMWebSocketAppendToSecKeyString = @"258EAFA5-E914-47DA-95
         return isContinue;
     }
     NSInteger closeCode = DMStatusCodeNormal;
-    if (receivedOpcode == DMWebSocketOpCodeConnectionClose) {
+    if (receivedOpcode == DMWebSocketOpCodeClose) {
         if (payloadLen == 1) {
             closeCode = DMStatusCodeProtocolError;
         }
@@ -176,7 +176,7 @@ static NSString *const IMWebSocketAppendToSecKeyString = @"258EAFA5-E914-47DA-95
     if (dataLength > bytesAvailable) {
         appendLength = bytesAvailable - offset;
     }
-    if (receivedOpcode == DMWebSocketOpCodeConnectionClose && appendLength > 0) {
+    if (receivedOpcode == DMWebSocketOpCodeClose && appendLength > 0) {
         uint16_t size = 2;
         offset += size;
         appendLength -= size;
@@ -185,7 +185,7 @@ static NSString *const IMWebSocketAppendToSecKeyString = @"258EAFA5-E914-47DA-95
     uint8_t content[appendLength];
     buf_readslice(_byteBuffer, content, (int)appendLength);
     NSData *data = [NSData dataWithBytes:content length:appendLength];
-    if (receivedOpcode == DMWebSocketOpCodeConnectionClose) {
+    if (receivedOpcode == DMWebSocketOpCodeClose) {
         NSString *closeReason = @"connection closed by server";
         NSString *customCloseReason = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
         if (customCloseReason) {
